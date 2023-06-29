@@ -1,0 +1,114 @@
+.App {
+  text-align: center;
+}
+#container {
+  width: 98vw;
+  min-width: 850px;
+  height: 98vh;
+  min-height: 500px;
+  /* border: 2px solid black; */
+  background-color: #111a20;
+  position: relative;
+  left: 1vw;
+  top: 1vh;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  /* grid-column-gap: max(5%, 10px); */
+  grid-template-rows: 100%;
+}
+#sidebar {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  /* border: 1px solid red; */
+  background-color: #202c33;
+  box-shadow: 3px 5px;
+  /* min-width: 250px; */
+}
+#search {
+  width: 100%;
+  height: 7vh;
+  background-color: #2a3942;
+  border: none;
+  text-align: center;
+  font-size: 1.2rem;
+}
+#startNewChat {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  /* border: 1px solid red; */
+  min-width: 500px;
+}
+#addChat p {
+  text-align: center;
+  color: rgb(178, 179, 178);
+}
+
+#conversation_title {
+  width: 100%;
+  /* border: 1px solid green; */
+  height: 7vh;
+}
+#sendMessage {
+  width: 100%;
+  height: 140px;
+  position: fixed;
+  top: 90vh;
+}
+#sendMessage form {
+  width: 100%;
+}
+input[type="text"] {
+  width: 67vw;
+  height: 7vh;
+  margin-left: 1.5%;
+  font-size: large;
+}
+input[type="submit"] {
+  height: 8vh;
+  width: 8vh;
+  color: #e9edef;
+  background-color: rgb(23, 167, 119);
+  border: none;
+}
+input[type="submit"]:hover {
+  background-color: rgb(2, 67, 45);
+}
+input[type="text"] {
+  background-color: #2a3942;
+  color: white;
+}
+#chatThread {
+  position: relative;
+  width: 90%;
+  left: 5%;
+  height: 80%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+#conversation_title {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  text-align: center;
+  color: rgb(178, 179, 178);
+  background-color: #202c33;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: fit-content;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #323a3f;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #111a20;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

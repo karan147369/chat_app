@@ -1,0 +1,26 @@
+.message_container {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  /* border: 1px dotted brown; */
+}
+.messageText-sent {
+  text-align: right;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+.messageText-received {
+  text-align: left;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+.messageText-sent span {
+  background-color: #196e63;
+  color: white;
+  padding: 15px;
+}
+.messageText-received span {
+  background-color: #202c33;
+  color: white;
+  padding: 15px;
+}
