@@ -13,6 +13,8 @@ const Home = () => {
   //ChatList should be updated once.
   useEffect(() => {
     setChatList(chatData);
+    setChatThread(chatData[0].thread);
+    setCurrentlyChattingTo(chatData[0].name);
   }, []);
   useEffect(() => {
     const element = document.getElementById("chatThread");
@@ -72,6 +74,7 @@ const Home = () => {
                         element.thread[element.thread.length - 1].message
                       }
                       id={index}
+                      url={element.url}
                     ></Chat>
                     <br></br>
                   </>
