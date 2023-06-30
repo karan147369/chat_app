@@ -3,13 +3,18 @@ import Chat from "../Components/chat";
 import Message from "../Components/Message";
 import { useEffect, useState } from "react";
 import chatData from "../json/chat.json";
+import friendsList from "../json/friends.json";
 
 const Home = () => {
   const [chatList, setChatList] = useState([]);
   const [chatThread, setChatThread] = useState([]);
   const [currentlyChattingTo, setCurrentlyChattingTo] = useState();
+
+  //ChatList should be updated once.
   useEffect(() => {
     setChatList(chatData);
+  }, []);
+  useEffect(() => {
     const element = document.getElementById("chatThread");
     element.scrollTo({
       top: 100000000000000,
@@ -35,6 +40,16 @@ const Home = () => {
       element.value = "";
     }
   };
+  const getSearchResults = (e) => {
+    const arr = [];
+    for (let i of chatData) {
+      if (i.name.match(`^${e.target.value}`)) {
+        arr.push(i);
+      }
+    }
+    console.log(arr);
+    setChatList(arr);
+  };
   return (
     <>
       <div id="container">
@@ -43,23 +58,30 @@ const Home = () => {
             type="search"
             id="search"
             placeholder="Search for Conversation"
+            onChange={(e) => getSearchResults(e)}
           ></input>
           <div id="addChat">
             <p>Conversations</p>
-            {chatList.map((element, index) => {
-              return (
-                <>
-                  <Chat
-                    name={element.name}
-                    lastMessage={
-                      element.thread[element.thread.length - 1].message
-                    }
-                    id={index}
-                  ></Chat>
-                  <br></br>
-                </>
-              );
-            })}
+            {chatList.length > 0 ? (
+              chatList.map((element, index) => {
+                return (
+                  <>
+                    <Chat
+                      name={element.name}
+                      lastMessage={
+                        element.thread[element.thread.length - 1].message
+                      }
+                      id={index}
+                    ></Chat>
+                    <br></br>
+                  </>
+                );
+              })
+            ) : (
+              <h1 style={{ color: "rgb(178, 179, 178)", textAlign: "center" }}>
+                No Results Found
+              </h1>
+            )}
           </div>
         </sidebar>
         <div id="startNewChat">

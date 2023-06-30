@@ -31,6 +31,7 @@
   border: none;
   text-align: center;
   font-size: 1.2rem;
+  color: rgb(178, 179, 178);
 }
 #startNewChat {
   grid-column-start: 2;
