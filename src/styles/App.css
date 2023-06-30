@@ -81,8 +81,8 @@ input[type="text"] {
 #chatThread {
   background-image: url("https://www.itl.cat/pngfile/big/2-27655_whatsapp-background-wallpaper.jpg");
   position: relative;
-  width: 90%;
-  left: 5%;
+  width: 100%;
+  top: 1%;
   height: 80%;
   overflow-y: scroll;
   scroll-behavior: smooth;
