@@ -52,6 +52,7 @@ const Home = () => {
     console.log(arr);
     setChatList(arr);
   };
+  const getFriendsList = () => {};
   return (
     <>
       <div id="container">
@@ -63,7 +64,8 @@ const Home = () => {
             onChange={(e) => getSearchResults(e)}
           ></input>
           <div id="addChat">
-            <p>Conversations</p>
+            {/* <p></p> */}
+            <button onClick={() => getFriendsList()}>Add conversation</button>
             {chatList.length > 0 ? (
               chatList.map((element, index) => {
                 return (
