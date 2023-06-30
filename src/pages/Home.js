@@ -3,13 +3,12 @@ import Chat from "../Components/chat";
 import Message from "../Components/Message";
 import { useEffect, useState } from "react";
 import chatData from "../json/chat.json";
-import friendsList from "../json/friends.json";
 
 const Home = () => {
   const [chatList, setChatList] = useState([]);
   const [chatThread, setChatThread] = useState([]);
   const [currentlyChattingTo, setCurrentlyChattingTo] = useState();
-
+  const [showFriendsList, setShowFriendsList] = useState(0);
   //ChatList should be updated once.
   useEffect(() => {
     setChatList(chatData);
@@ -24,6 +23,7 @@ const Home = () => {
       behavior: "instant",
     });
     const array = document.getElementsByClassName("chat_container");
+
     for (let i of array) {
       i.addEventListener("click", () => {
         const id = i.getAttribute("id").split("-")[1];
@@ -31,7 +31,7 @@ const Home = () => {
         setCurrentlyChattingTo(chatList[id].name);
       });
     }
-  }, [chatList, chatThread]);
+  }, [chatList, chatThread, showFriendsList]);
   const sendMessage = (e) => {
     e.preventDefault();
     const element = document.getElementById("message");
@@ -49,10 +49,14 @@ const Home = () => {
         arr.push(i);
       }
     }
-    console.log(arr);
+
     setChatList(arr);
   };
-  const getFriendsList = () => {};
+  const getFriendsList = () => {
+    let value = showFriendsList;
+    if (value === 0) setShowFriendsList(-1);
+    else setShowFriendsList(0);
+  };
   return (
     <>
       <div id="container">
@@ -64,24 +68,32 @@ const Home = () => {
             onChange={(e) => getSearchResults(e)}
           ></input>
           <div id="addChat">
-            {/* <p></p> */}
-            <button onClick={() => getFriendsList()}>Add conversation</button>
+            <button onClick={() => getFriendsList()}>
+              {showFriendsList === 0
+                ? "Show all friends"
+                : "Show previous chats"}
+            </button>
             {chatList.length > 0 ? (
-              chatList.map((element, index) => {
-                return (
-                  <>
-                    <Chat
-                      name={element.name}
-                      lastMessage={
-                        element.thread[element.thread.length - 1].message
-                      }
-                      id={index}
-                      url={element.url}
-                    ></Chat>
-                    <br></br>
-                  </>
-                );
-              })
+              chatList
+                .filter((element) => element.thread.length > showFriendsList)
+                .map((element, index) => {
+                  return (
+                    <>
+                      <Chat
+                        name={element.name}
+                        lastMessage={
+                          element.thread[element.thread.length - 1] !==
+                          undefined
+                            ? element.thread[element.thread.length - 1].message
+                            : ""
+                        }
+                        id={index}
+                        url={element.url}
+                      ></Chat>
+                      <br></br>
+                    </>
+                  );
+                })
             ) : (
               <h1 style={{ color: "rgb(178, 179, 178)", textAlign: "center" }}>
                 No Results Found
