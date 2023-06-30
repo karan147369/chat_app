@@ -12,12 +12,24 @@
         "status": "sent"
       },
       {
-        "message": "asdfh asdhfk kpbai",
+        "message": "Lorem ipsum dolor sit amet, consectetur adipiscing",
         "status": "received"
       },
       {
-        "message": "asdfh adsadsfas asfdsafasdf i",
+        "message": "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "status": "sent"
+      },
+      {
+        "message": "magna. Morbi quis commodo odio aenean sed adipiscing diam",
+        "status": "received"
+      },
+      {
+        "message": "ltrices sagitti",
+        "status": "sent"
+      },
+      {
+        "message": "estas maecenas pharetra",
+        "status": "received"
       }
     ]
   },
@@ -34,12 +46,28 @@
         "status": "sent"
       },
       {
-        "message": "asdfh asdhfk kpbai",
+        "message": "Vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor. Id aliquet risus feugiat in ante metus. ",
         "status": "received"
       },
       {
-        "message": "ert erg htgre",
+        "message": "Dolor morbi non arcu risus quis varius quam quisque id. Adipiscing at in tellus integer ",
         "status": "sent"
+      },
+      {
+        "message": "in ante metus. Dolor morbi non arcu risus quis varius quam quisque id. Adipi ",
+        "status": "sent"
+      },
+      {
+        "message": "Pellentesque",
+        "status": "received"
+      },
+      {
+        "message": "Molestie a iaculis",
+        "status": "sent"
+      },
+      {
+        "message": "Vitae suscipit",
+        "status": "received"
       }
     ]
   },
@@ -60,59 +88,59 @@
         "status": "received"
       },
       {
-        "message": "asdf ewrwe bbg",
+        "message": "Laoreet sit amet cursus sit amet dictum. ",
         "status": "sent"
       },
       {
-        "message": "asdf ewrwe bbg",
+        "message": "Risus nec feugiat in fermentum posuere urna. Duis at tellus at urna condimentum mattis pellentesque.",
         "status": "sent"
       },
       {
-        "message": "asdf ewrwe bbg",
+        "message": "Massa massa ultricies mi quis hendrerit dolor magna eget. ",
         "status": "sent"
       },
       {
-        "message": "asdf ewrwe bbg",
+        "message": "aUt sem nulla pharetra",
         "status": "received"
       },
       {
-        "message": "asdf ewrwe bbg",
+        "message": "In vitae turpis massa",
         "status": "received"
       },
       {
-        "message": "asdf ewrwe bbg",
+        "message": "Lobortis scelerisque fermentum dui faucibus in. ",
         "status": "sent"
       },
       {
-        "message": "asdf ewrwe bbg",
+        "message": "rcu cursus euismod quis viverra",
         "status": "received"
       },
       {
-        "message": "asdf ewrwe bbg",
+        "message": "Cursus in hac habitasse platea dictumst quisque. ",
+        "status": "sent"
+      },
+      {
+        "message": "Risus pretium quam vulputate dignissim suspendisse in est ante in",
         "status": "received"
       },
       {
-        "message": "asdf ewrwe bbg",
+        "message": "Egestas fringilla",
         "status": "received"
       },
       {
-        "message": "asdf ewrwe bbg",
+        "message": "Id ornare",
+        "status": "sent"
+      },
+      {
+        "message": "Ac turpis egestas",
         "status": "received"
       },
       {
-        "message": "asdf ewrwe bbg",
+        "message": "faucibus scelerisque",
         "status": "received"
       },
       {
-        "message": "asdf ewrwe bbg",
-        "status": "received"
-      },
-      {
-        "message": "asdf ewrwe bbg",
-        "status": "received"
-      },
-      {
-        "message": "asdf ewrwe bbg",
+        "message": "Quam adipiscing",
         "status": "received"
       }
     ]

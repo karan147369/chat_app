@@ -79,6 +79,7 @@ input[type="text"] {
   color: white;
 }
 #chatThread {
+  background-image: url("https://www.itl.cat/pngfile/big/2-27655_whatsapp-background-wallpaper.jpg");
   position: relative;
   width: 90%;
   left: 5%;
@@ -91,7 +92,7 @@ input[type="text"] {
   font-weight: bolder;
   text-align: center;
   color: rgb(178, 179, 178);
-  background-color: #202c33;
+  /* background-color: #202c33; */
 }
 
 ::-webkit-scrollbar {

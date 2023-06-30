@@ -88,7 +88,22 @@ const Home = () => {
           </div>
         </sidebar>
         <div id="startNewChat">
-          <div id="conversation_title">{currentlyChattingTo}</div>
+          <img
+            src="https://clipart.info/images/ccovers/1499955335whatsapp-icon-logo-png.png"
+            style={{
+              height: "30px",
+              width: "30px",
+              marginTop: "5px",
+              display: "inline",
+              opacity: "0.5",
+            }}
+          ></img>
+          <div
+            id="conversation_title"
+            style={{ display: "inline", marginLeft: "10%" }}
+          >
+            {currentlyChattingTo}
+          </div>
           <div id="chatThread">
             {chatThread.map((element) => {
               return (

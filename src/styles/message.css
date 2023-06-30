@@ -16,11 +16,13 @@
 }
 .messageText-sent span {
   background-color: #196e63;
+  border-radius: 15px;
   color: white;
   padding: 15px;
 }
 .messageText-received span {
   background-color: #202c33;
+  border-radius: 15px;
   color: white;
   padding: 15px;
 }
