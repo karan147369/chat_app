@@ -58,6 +58,10 @@
 #sendMessage form {
   width: 100%;
 }
+#message {
+  margin-left: 0;
+  height: 9vh;
+}
 input[type="text"] {
   width: 67vw;
   height: 7vh;
@@ -65,8 +69,8 @@ input[type="text"] {
   font-size: large;
 }
 input[type="submit"] {
-  height: 8vh;
-  width: 8vh;
+  height: 10vh;
+  width: 8vw;
   color: #e9edef;
   background-color: rgb(23, 167, 119);
   border: none;
@@ -76,6 +80,7 @@ input[type="submit"]:hover {
 }
 input[type="text"] {
   background-color: #2a3942;
+  text-align: center;
   color: white;
 }
 #chatThread {
@@ -83,7 +88,7 @@ input[type="text"] {
   position: relative;
   width: 100%;
   top: 1%;
-  height: 80%;
+  height: 84%;
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
@@ -94,7 +99,9 @@ input[type="text"] {
   color: rgb(178, 179, 178);
   /* background-color: #202c33; */
 }
-
+/* #message {
+  width: 100%;
+} */
 ::-webkit-scrollbar {
   width: 5px;
   height: fit-content;
@@ -113,4 +120,9 @@ input[type="text"] {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+#addChat button {
+  background-color: rgba(1, 1, 1, 0);
+  margin-left: 30%;
+  color: rgb(178, 179, 178);
 }
