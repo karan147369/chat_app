@@ -84,7 +84,9 @@ const Home = () => {
                         lastMessage={
                           element.thread[element.thread.length - 1] !==
                           undefined
-                            ? element.thread[element.thread.length - 1].message
+                            ? element.thread[
+                                element.thread.length - 1
+                              ].message.substring(0, 20) + "..."
                             : ""
                         }
                         id={index}
